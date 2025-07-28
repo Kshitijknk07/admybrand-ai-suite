@@ -30,7 +30,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glassmorphism backdrop-blur-xl bg-white/80 dark:bg-black/80 border-b border-white/20"
+          ? "bg-white/95 backdrop-blur-xl border-b border-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -70,7 +70,7 @@ export function Navbar() {
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            <Button className="gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700">
+            <Button className="bg-green-600 text-white hover:bg-green-700 px-6 py-2 rounded-md font-medium">
               Get Started
             </Button>
           </div>
@@ -117,7 +117,7 @@ export function Navbar() {
                 <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
                 <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
-              <Button className="gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700">
+              <Button className="bg-green-600 text-white hover:bg-green-700 px-6 py-2 rounded-md font-medium">
                 Get Started
               </Button>
             </div>

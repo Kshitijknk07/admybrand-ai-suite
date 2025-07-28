@@ -167,7 +167,7 @@ export function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                  <div className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                     <Star className="h-4 w-4" />
                     Most Popular
                   </div>
@@ -210,8 +210,8 @@ export function PricingSection() {
                 <Button
                   className={`w-full mt-8 ${
                     plan.popular
-                      ? "gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 glow"
-                      : "border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400"
+                      ? "bg-green-600 text-white hover:bg-green-700"
+                      : "border border-gray-300 hover:border-green-600"
                   }`}
                 >
                   {plan.popular ? "Start Free Trial" : "Get Started"}

@@ -135,7 +135,7 @@ export function FeaturesSection() {
             <span className="gradient-text">Powerful Features</span> That Drive
             Results
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Everything you need to transform your marketing strategy with the
             power of artificial intelligence
           </p>
@@ -147,22 +147,22 @@ export function FeaturesSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 glassmorphism border-0"
-            >
+                      <Card
+            key={index}
+            className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 bg-white"
+          >
               <CardHeader className="pb-4">
                 <div
-                  className={`w-12 h-12 rounded-lg ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <feature.icon className={`h-6 w-6 ${feature.color}`} />
+                  <feature.icon className={`h-6 w-6 text-green-600`} />
                 </div>
-                <CardTitle className="text-xl font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                <CardTitle className="text-xl font-semibold group-hover:text-green-600 transition-colors duration-300">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <CardDescription className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </CardDescription>
               </CardContent>
@@ -172,19 +172,19 @@ export function FeaturesSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="glassmorphism rounded-2xl p-8 max-w-2xl mx-auto">
+          <div className="border border-gray-200 rounded-2xl p-8 max-w-2xl mx-auto bg-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Transform Your Marketing?
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               Join thousands of marketers who are already using AI to drive
               better results
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-lg font-semibold transition-all duration-300 glow">
+              <button className="bg-green-600 text-white hover:bg-green-700 px-8 py-3 rounded-md font-medium transition-all duration-300">
                 Start Free Trial
               </button>
-              <button className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+              <button className="border border-gray-300 hover:border-green-600 px-8 py-3 rounded-md font-medium transition-all duration-300">
                 Schedule Demo
               </button>
             </div>

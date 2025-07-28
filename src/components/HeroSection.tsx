@@ -52,17 +52,17 @@ export function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-white"
     >
       {/* Background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full opacity-20 blur-3xl floating-orb animate-float" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-10 blur-3xl floating-orb animate-float" />
         <div
-          className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-3xl floating-orb animate-float"
+          className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full opacity-10 blur-3xl floating-orb animate-float"
           style={{ animationDelay: "1s" }}
         />
         <div
-          className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-3xl floating-orb animate-float"
+          className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-gradient-to-r from-teal-400 to-green-500 rounded-full opacity-10 blur-3xl floating-orb animate-float"
           style={{ animationDelay: "2s" }}
         />
       </div>
@@ -85,7 +85,7 @@ export function HeroSection() {
         >
           Transform your brand with intelligent automation, predictive
           analytics, and AI-driven insights that deliver{" "}
-          <span className="font-semibold text-blue-600 dark:text-blue-400">
+          <span className="font-semibold text-green-600">
             10x better results
           </span>
         </p>
@@ -97,7 +97,7 @@ export function HeroSection() {
         >
           <Button
             size="lg"
-            className="gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-6 h-auto glow"
+            className="bg-green-600 text-white hover:bg-green-700 text-lg px-8 py-4 h-auto rounded-md font-medium"
           >
             Start Free Trial
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -105,7 +105,7 @@ export function HeroSection() {
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-lg px-8 py-6 h-auto"
+            className="border border-gray-300 hover:border-green-600 text-lg px-8 py-4 h-auto rounded-md font-medium"
           >
             <Play className="mr-2 h-5 w-5" />
             Watch Demo
@@ -122,31 +122,27 @@ export function HeroSection() {
               <Zap className="h-8 w-8 text-yellow-500" />
             </div>
             <div className="text-3xl font-bold gradient-text">500%</div>
-            <div className="text-gray-600 dark:text-gray-400">ROI Increase</div>
+            <div className="text-gray-600">ROI Increase</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
               <TrendingUp className="h-8 w-8 text-green-500" />
             </div>
             <div className="text-3xl font-bold gradient-text">10x</div>
-            <div className="text-gray-600 dark:text-gray-400">
-              Faster Results
-            </div>
+            <div className="text-gray-600">Faster Results</div>
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center mb-2">
               <Users className="h-8 w-8 text-blue-500" />
             </div>
             <div className="text-3xl font-bold gradient-text">50K+</div>
-            <div className="text-gray-600 dark:text-gray-400">Happy Users</div>
+            <div className="text-gray-600">Happy Users</div>
           </div>
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <p className="text-gray-500 dark:text-gray-400 mb-4">
-            Trusted by leading brands
-          </p>
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <p className="text-gray-500 mb-4">Trusted by leading brands</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             <div className="text-2xl font-bold text-gray-400">Netflix</div>
             <div className="text-2xl font-bold text-gray-400">Spotify</div>

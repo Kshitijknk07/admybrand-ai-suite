@@ -158,7 +158,7 @@ export function ContactForm() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full gradient-border bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 glow"
+                  className="w-full bg-green-600 text-white hover:bg-green-700"
                 >
                   {isSubmitting ? (
                     "Sending..."
@@ -180,8 +180,8 @@ export function ContactForm() {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-950/20 flex items-center justify-center flex-shrink-0">
-                      <info.icon className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                      <info.icon className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-gray-100">
@@ -207,7 +207,10 @@ export function ContactForm() {
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Check out our FAQ section for quick answers to common questions.
               </p>
-              <Button variant="outline" className="w-full">
+              <Button
+                variant="outline"
+                className="w-full border-gray-300 hover:border-green-600"
+              >
                 View FAQ
               </Button>
             </div>
