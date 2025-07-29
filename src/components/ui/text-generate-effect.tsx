@@ -200,12 +200,12 @@ export function DynamicTextGenerator({
   }, [currentIndex, currentPhrase, speed, loopDelay, phrases.length]);
 
   return (
-    <div className={cn("inline-block", className)}>
-      <span>{currentText}</span>
+    <div className={cn("inline-block leading-[inherit]", className)}>
+      <span className="inline-block leading-[inherit]">{currentText}</span>
       {!isComplete && (
         <span
           className={cn(
-            "inline-block w-[2px] h-[1em] bg-current animate-pulse",
+            "inline-block w-[2px] h-[1em] bg-current animate-pulse leading-[inherit]",
             cursorClassName
           )}
         />
