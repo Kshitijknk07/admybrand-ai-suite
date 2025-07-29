@@ -97,7 +97,7 @@ export function Navbar() {
               <div className="w-10 h-10 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                 <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
+              <span className="text-2xl font-black bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent tracking-[-0.02em]">
                 ADmyBRAND
               </span>
             </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-slate-700 hover:text-purple-600 px-4 py-2 text-sm font-semibold transition-all duration-300 relative overflow-hidden group"
+                className="text-slate-700 hover:text-purple-600 px-4 py-2 text-base font-bold transition-all duration-300 relative overflow-hidden group tracking-wide"
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-purple-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-lg"></div>
@@ -127,11 +127,11 @@ export function Navbar() {
           >
             <Button
               variant="ghost"
-              className="text-slate-700 hover:text-purple-600 hover:bg-purple-50 font-semibold transition-all duration-300"
+              className="text-slate-700 hover:text-purple-600 hover:bg-purple-50 font-bold transition-all duration-300 text-base tracking-wide"
             >
               Sign In
             </Button>
-            <Button className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 text-base tracking-wide">
               Get Started
             </Button>
           </div>
@@ -162,7 +162,7 @@ export function Navbar() {
                       <div className="w-10 h-10 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 rounded-xl flex items-center justify-center shadow-lg">
                         <span className="text-white font-bold text-lg">A</span>
                       </div>
-                      <span className="text-2xl font-bold bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
+                      <span className="text-2xl font-black bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent tracking-[-0.02em]">
                         ADmyBRAND
                       </span>
                     </Link>
