@@ -15,7 +15,10 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section id="features" className="py-20 lg:py-32 bg-white">
+      <section
+        id="features"
+        className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50/80"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
@@ -31,7 +34,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-gradient-to-br from-white to-slate-50/50">
+            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <svg
@@ -64,7 +67,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-gradient-to-br from-white to-slate-50/50">
+            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <svg
@@ -97,7 +100,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-gradient-to-br from-white to-slate-50/50">
+            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-xl bg-white/80 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <svg
@@ -134,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* More sections will be added here */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-purple-50/30">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50/80">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
             More Sections Coming Soon

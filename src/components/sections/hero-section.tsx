@@ -11,19 +11,23 @@ export function HeroSection() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const indicatorsRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  const backgroundRef = useRef<HTMLDivElement>(null);
+  const particlesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.05 });
 
-    // Background animation
-    if (backgroundRef.current) {
-      gsap.to(backgroundRef.current, {
-        backgroundPosition: "200% 200%",
-        duration: 20,
-        ease: "none",
+    // Clean particle animation
+    if (particlesRef.current) {
+      const particles = particlesRef.current.children;
+      gsap.to(particles, {
+        y: -20,
+        opacity: 0,
+        duration: 3,
+        stagger: 0.1,
+        ease: "power2.out",
         repeat: -1,
         yoyo: true,
+        delay: (index) => index * 0.2,
       });
     }
 
@@ -110,77 +114,58 @@ export function HeroSection() {
       ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Animated Background Gradient */}
+      {/* Clean Modern Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50/80" />
+
+      {/* Subtle Mesh Gradient Overlay */}
       <div
-        ref={backgroundRef}
-        className="absolute inset-0 bg-gradient-to-br from-slate-50 via-purple-50/30 to-blue-50/20"
+        className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 80%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
-            linear-gradient(45deg, rgba(147, 51, 234, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)
+          background: `
+            radial-gradient(circle at 25% 25%, rgba(147, 51, 234, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%)
           `,
-          backgroundSize: "200% 200%, 200% 200%, 200% 200%, 100% 100%",
         }}
       />
 
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large floating circles */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-purple-600/5 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-blue-600/5 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-purple-300/8 to-blue-300/8 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Small floating dots */}
-        <div
-          className="absolute top-32 left-1/4 w-2 h-2 bg-purple-400/30 rounded-full animate-bounce"
-          style={{ animationDelay: "0.5s" }}
-        />
-        <div
-          className="absolute top-40 right-1/3 w-1 h-1 bg-blue-400/40 rounded-full animate-bounce"
-          style={{ animationDelay: "1.5s" }}
-        />
-        <div
-          className="absolute bottom-32 left-1/3 w-1.5 h-1.5 bg-purple-500/30 rounded-full animate-bounce"
-          style={{ animationDelay: "2.5s" }}
-        />
-        <div
-          className="absolute bottom-40 right-1/4 w-1 h-1 bg-blue-500/40 rounded-full animate-bounce"
-          style={{ animationDelay: "3s" }}
-        />
+      {/* Clean Animated Particles */}
+      <div ref={particlesRef} className="absolute inset-0 overflow-hidden">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-purple-400/20 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${i * 0.3}s`,
+            }}
+          />
+        ))}
       </div>
 
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Elegant Floating Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large subtle orbs */}
+        <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-purple-100/40 to-purple-200/20 rounded-full blur-2xl" />
+        <div className="absolute bottom-20 right-10 w-56 h-56 bg-gradient-to-br from-blue-100/40 to-blue-200/20 rounded-full blur-2xl" />
+
+        {/* Medium accent orbs */}
+        <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-gradient-to-br from-purple-200/30 to-purple-300/20 rounded-full blur-xl" />
+        <div className="absolute bottom-1/3 left-1/4 w-28 h-28 bg-gradient-to-br from-blue-200/30 to-blue-300/20 rounded-full blur-xl" />
+      </div>
+
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
-          `,
-            backgroundSize: "50px 50px",
+              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "60px 60px",
           }}
-        />
-      </div>
-
-      {/* Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-full blur-xl animate-pulse" />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-blue-600/10 rounded-full blur-xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute top-3/4 left-1/2 w-20 h-20 bg-gradient-to-br from-purple-300/15 to-blue-300/15 rounded-full blur-xl animate-pulse"
-          style={{ animationDelay: "2s" }}
         />
       </div>
 
@@ -269,11 +254,11 @@ export function HeroSection() {
           <div ref={imageRef} className="relative lg:order-2">
             <div className="relative">
               {/* Main Hero Image/Video Container */}
-              <div className="relative bg-gradient-to-br from-purple-100/50 to-blue-100/50 rounded-2xl p-8 shadow-2xl backdrop-blur-sm border border-white/20">
-                <div className="aspect-video bg-gradient-to-br from-white/80 to-slate-50/80 rounded-xl shadow-lg flex items-center justify-center backdrop-blur-sm border border-white/30">
+              <div className="relative bg-white/80 rounded-2xl p-8 shadow-2xl backdrop-blur-sm border border-white/50">
+                <div className="aspect-video bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-lg flex items-center justify-center backdrop-blur-sm border border-slate-200/50">
                   {/* Placeholder for hero image/video */}
                   <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto shadow-lg animate-pulse">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
                       <svg
                         className="w-8 h-8 text-white"
                         fill="none"
@@ -299,13 +284,10 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Floating Elements */}
-                <div
-                  className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg flex items-center justify-center animate-bounce"
-                  style={{ animationDelay: "0.5s" }}
-                >
+                {/* Clean Floating Elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg flex items-center justify-center">
                   <svg
-                    className="w-8 h-8 text-white"
+                    className="w-6 h-6 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -319,12 +301,9 @@ export function HeroSection() {
                   </svg>
                 </div>
 
-                <div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center animate-bounce"
-                  style={{ animationDelay: "1s" }}
-                >
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-white"
+                    className="w-5 h-5 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
