@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { WobbleCard } from "@/components/ui/wobble-card";
 import { gsap } from "gsap";
 
 export function HeroSection() {
@@ -250,44 +251,61 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Hero Image/Video */}
+          {/* Right Column - WobbleCard Demo */}
           <div ref={imageRef} className="relative lg:order-2">
-            <div className="relative">
-              {/* Main Hero Image/Video Container */}
-              <div className="relative bg-white/80 rounded-2xl p-8 shadow-2xl backdrop-blur-sm border border-white/50">
-                <div className="aspect-video bg-gradient-to-br from-slate-50 to-white rounded-xl shadow-lg flex items-center justify-center backdrop-blur-sm border border-slate-200/50">
-                  {/* Placeholder for hero image/video */}
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
-                      <svg
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      </svg>
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="text-lg font-semibold text-slate-900">
-                        AI Dashboard Preview
-                      </h3>
-                      <p className="text-sm text-slate-600">
-                        Interactive marketing analytics and AI insights
-                      </p>
-                    </div>
-                  </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+              <WobbleCard
+                containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-800 min-h-[500px] lg:min-h-[300px]"
+                className=""
+              >
+                <div className="max-w-xs">
+                  <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                    ADmyBRAND AI powers your marketing success
+                  </h2>
+                  <p className="mt-4 text-left text-base/6 text-neutral-200">
+                    With advanced AI algorithms, we help thousands of brands
+                    create compelling marketing campaigns that drive real
+                    results.
+                  </p>
                 </div>
-
-                {/* Clean Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg flex items-center justify-center">
+                <div className="absolute -right-4 lg:-right-[40%] -bottom-10 w-32 h-32 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
                   <svg
-                    className="w-6 h-6 text-white"
+                    className="w-16 h-16 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                </div>
+              </WobbleCard>
+              <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+                <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                  Smart analytics & insights
+                </h2>
+                <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+                  Get real-time data and AI-powered recommendations to optimize
+                  your campaigns.
+                </p>
+              </WobbleCard>
+              <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+                <div className="max-w-sm">
+                  <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+                    Start your AI-powered marketing journey today!
+                  </h2>
+                  <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+                    Join thousands of successful brands using ADmyBRAND AI Suite
+                    to transform their marketing.
+                  </p>
+                </div>
+                <div className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
+                  <svg
+                    className="w-20 h-20 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -300,23 +318,7 @@ export function HeroSection() {
                     />
                   </svg>
                 </div>
-
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center">
-                  <svg
-                    className="w-5 h-5 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                </div>
-              </div>
+              </WobbleCard>
             </div>
           </div>
         </div>
