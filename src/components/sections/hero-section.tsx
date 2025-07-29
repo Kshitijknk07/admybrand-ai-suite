@@ -3,6 +3,10 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { WobbleCard } from "@/components/ui/wobble-card";
+import {
+  TextGenerateEffect,
+  DynamicTextGenerator,
+} from "@/components/ui/text-generate-effect";
 import { gsap } from "gsap";
 
 export function HeroSection() {
@@ -182,12 +186,21 @@ export function HeroSection() {
               >
                 <span className="block">Transform Your</span>
                 <span className="block">Brand with</span>
-                <span className="block bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent">
-                  AI-Powered
-                </span>
-                <span className="block bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent">
-                  Marketing
-                </span>
+                <div className="block">
+                  <DynamicTextGenerator
+                    phrases={[
+                      "AI-Powered Marketing",
+                      "Smart Campaigns",
+                      "Data-Driven Results",
+                      "Automated Growth",
+                      "Intelligent Analytics",
+                    ]}
+                    className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent"
+                    cursorClassName="bg-purple-600"
+                    speed={0.06}
+                    loopDelay={3}
+                  />
+                </div>
               </h1>
             </div>
 
