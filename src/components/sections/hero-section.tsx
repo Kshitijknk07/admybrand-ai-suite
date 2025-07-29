@@ -3,10 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { WobbleCard } from "@/components/ui/wobble-card";
-import {
-  TextGenerateEffect,
-  DynamicTextGenerator,
-} from "@/components/ui/text-generate-effect";
+import { DynamicTextGenerator } from "@/components/ui/text-generate-effect";
 import { gsap } from "gsap";
 
 export function HeroSection() {
@@ -179,14 +176,18 @@ export function HeroSection() {
           {/* Left Column - Content */}
           <div className="space-y-8 lg:space-y-10">
             {/* Headline */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               <h1
                 ref={headlineRef}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-slate-900 leading-[0.9] tracking-[-0.02em]"
               >
-                <span className="block">Transform Your</span>
-                <span className="block">Brand with</span>
-                <div className="block">
+                <span className="block font-extrabold text-slate-800">
+                  Transform Your
+                </span>
+                <span className="block font-extrabold text-slate-800">
+                  Brand with
+                </span>
+                <div className="block mt-2 min-h-[1.2em]">
                   <DynamicTextGenerator
                     phrases={[
                       "AI-Powered Marketing",
@@ -195,7 +196,7 @@ export function HeroSection() {
                       "Automated Growth",
                       "Intelligent Analytics",
                     ]}
-                    className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent"
+                    className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent font-black whitespace-nowrap"
                     cursorClassName="bg-purple-600"
                     speed={0.06}
                     loopDelay={3}
@@ -205,10 +206,10 @@ export function HeroSection() {
             </div>
 
             {/* Subtext */}
-            <div className="max-w-lg">
+            <div className="max-w-2xl">
               <p
                 ref={subtextRef}
-                className="text-lg sm:text-xl text-slate-600 leading-relaxed"
+                className="text-lg sm:text-xl lg:text-2xl text-slate-600 leading-[1.4] font-medium tracking-[-0.01em]"
               >
                 ADmyBRAND AI Suite helps you create, manage, and optimize your
                 marketing campaigns with cutting-edge artificial intelligence.
@@ -216,10 +217,10 @@ export function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
+            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-6">
               <Button
                 size="lg"
-                className="text-base px-8 py-4 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-semibold shadow-xl hover:shadow-purple-500/25 transition-all duration-300 relative overflow-hidden group"
+                className="text-lg px-10 py-6 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-bold shadow-xl hover:shadow-purple-500/25 transition-all duration-300 relative overflow-hidden group tracking-wide"
                 onMouseEnter={handleButtonHover}
                 onMouseLeave={handleButtonLeave}
               >
@@ -229,7 +230,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-base px-8 py-4 border-2 border-slate-300 text-slate-700 hover:border-purple-300 hover:text-purple-700 hover:bg-purple-50 font-semibold transition-all duration-300 relative overflow-hidden group"
+                className="text-lg px-10 py-6 border-2 border-slate-300 text-slate-700 hover:border-purple-300 hover:text-purple-700 hover:bg-purple-50 font-bold transition-all duration-300 relative overflow-hidden group tracking-wide"
                 onMouseEnter={handleButtonHover}
                 onMouseLeave={handleButtonLeave}
               >
@@ -241,25 +242,31 @@ export function HeroSection() {
             {/* Trust Indicators */}
             <div
               ref={indicatorsRef}
-              className="flex flex-wrap items-center gap-6 text-sm text-slate-500"
+              className="flex flex-wrap items-center gap-8 text-base text-slate-500"
             >
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full shadow-sm animate-pulse" />
-                <span className="font-medium">No credit card required</span>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-emerald-500 rounded-full shadow-sm animate-pulse" />
+                <span className="font-semibold tracking-wide">
+                  No credit card required
+                </span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <div
-                  className="w-2 h-2 bg-emerald-500 rounded-full shadow-sm animate-pulse"
+                  className="w-3 h-3 bg-emerald-500 rounded-full shadow-sm animate-pulse"
                   style={{ animationDelay: "0.5s" }}
                 />
-                <span className="font-medium">14-day free trial</span>
+                <span className="font-semibold tracking-wide">
+                  14-day free trial
+                </span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-3">
                 <div
-                  className="w-2 h-2 bg-emerald-500 rounded-full shadow-sm animate-pulse"
+                  className="w-3 h-3 bg-emerald-500 rounded-full shadow-sm animate-pulse"
                   style={{ animationDelay: "1s" }}
                 />
-                <span className="font-medium">Cancel anytime</span>
+                <span className="font-semibold tracking-wide">
+                  Cancel anytime
+                </span>
               </div>
             </div>
           </div>
