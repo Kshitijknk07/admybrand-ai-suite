@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADmyBRAND AI - AI-Powered Marketing Intelligence
 
-## Getting Started
+A modern Next.js application showcasing AI-powered marketing tools with a beautiful, responsive design.
 
-First, run the development server:
+## 🚀 Features
+
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Shadcn/ui** components
+- **Framer Motion** for animations
+- **Responsive Design** for all devices
+- **Modern UI/UX** with glassmorphism effects
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Forms**: React Hook Form + Zod
+- **State Management**: TanStack Query
+
+## 📦 Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd admybrand-ai-ignition
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/     # Reusable UI components
+├── lib/           # Utility functions
+├── hooks/         # Custom React hooks
+├── assets/        # Images and static assets
+├── globals.css    # Global styles
+├── layout.tsx     # Root layout
+└── page.tsx       # Home page
+```
 
-## Learn More
+## 🎨 Design System
 
-To learn more about Next.js, take a look at the following resources:
+The project uses a comprehensive design system with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Custom CSS variables for theming
+- Glassmorphism effects
+- Gradient backgrounds
+- Responsive typography
+- Smooth animations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Responsive Design
 
-## Deploy on Vercel
+The application is fully responsive and optimized for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+The project can be deployed to:
+
+- Vercel (recommended)
+- Netlify
+- Any static hosting service
+
+## 📄 License
+
+This project is licensed under the MIT License.
