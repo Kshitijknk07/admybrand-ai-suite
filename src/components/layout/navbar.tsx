@@ -32,113 +32,49 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // GSAP Animations
+  // Simple entrance animation
   useEffect(() => {
-    // Initial entrance animation
-    const tl = gsap.timeline({ delay: 0.2 });
+    const tl = gsap.timeline({ delay: 0.05 });
 
     if (navbarRef.current) {
       tl.fromTo(
         navbarRef.current,
-        { y: -100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+        { y: -30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }
       );
     }
 
     if (logoRef.current) {
       tl.fromTo(
         logoRef.current,
-        { x: -50, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.6, ease: "back.out(1.7)" },
-        "-=0.4"
+        { x: -20, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.2, ease: "power2.out" },
+        "-=0.15"
       );
     }
 
     if (navItemsRef.current?.children) {
       tl.fromTo(
         navItemsRef.current.children,
-        { y: -20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" },
-        "-=0.3"
+        { y: -15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.2, stagger: 0.03, ease: "power2.out" },
+        "-=0.1"
       );
     }
 
     if (ctaRef.current?.children) {
       tl.fromTo(
         ctaRef.current.children,
-        { x: 50, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "back.out(1.7)",
-        },
-        "-=0.4"
+        { x: 20, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.2, stagger: 0.03, ease: "power2.out" },
+        "-=0.15"
       );
-    }
-
-    // Scroll animation
-    const scrollTl = gsap.timeline({ paused: true });
-    if (navbarRef.current) {
-      scrollTl.to(navbarRef.current, {
-        backgroundColor: "rgba(255, 255, 255, 0.95)",
-        backdropFilter: "blur(20px)",
-        borderBottomColor: "rgba(226, 232, 240, 0.5)",
-        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-        duration: 0.3,
-        ease: "power2.out",
-      });
-    }
-
-    // Update scroll animation based on scroll state
-    if (isScrolled) {
-      scrollTl.play();
-    } else {
-      scrollTl.reverse();
     }
 
     return () => {
       tl.kill();
-      scrollTl.kill();
     };
-  }, [isScrolled]);
-
-  // Hover animations for nav items
-  const handleNavHover = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    gsap.to(e.currentTarget, {
-      y: -2,
-      scale: 1.05,
-      duration: 0.2,
-      ease: "power2.out",
-    });
-  };
-
-  const handleNavLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    gsap.to(e.currentTarget, {
-      y: 0,
-      scale: 1,
-      duration: 0.2,
-      ease: "power2.out",
-    });
-  };
-
-  // Button hover animations
-  const handleButtonHover = (e: React.MouseEvent<HTMLButtonElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1.05,
-      duration: 0.2,
-      ease: "back.out(1.7)",
-    });
-  };
-
-  const handleButtonLeave = (e: React.MouseEvent<HTMLButtonElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      duration: 0.2,
-      ease: "power2.out",
-    });
-  };
+  }, []);
 
   return (
     <nav
@@ -157,20 +93,6 @@ export function Navbar() {
               ref={logoRef}
               href="/"
               className="flex items-center space-x-3 group"
-              onMouseEnter={(e) => {
-                gsap.to(e.currentTarget, {
-                  scale: 1.05,
-                  duration: 0.2,
-                  ease: "back.out(1.7)",
-                });
-              }}
-              onMouseLeave={(e) => {
-                gsap.to(e.currentTarget, {
-                  scale: 1,
-                  duration: 0.2,
-                  ease: "power2.out",
-                });
-              }}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                 <span className="text-white font-bold text-lg">A</span>
@@ -191,8 +113,6 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className="text-slate-700 hover:text-purple-600 px-4 py-2 text-sm font-semibold transition-all duration-300 relative overflow-hidden group"
-                onMouseEnter={handleNavHover}
-                onMouseLeave={handleNavLeave}
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-purple-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-lg"></div>
@@ -208,16 +128,10 @@ export function Navbar() {
             <Button
               variant="ghost"
               className="text-slate-700 hover:text-purple-600 hover:bg-purple-50 font-semibold transition-all duration-300"
-              onMouseEnter={handleButtonHover}
-              onMouseLeave={handleButtonLeave}
             >
               Sign In
             </Button>
-            <Button
-              className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              onMouseEnter={handleButtonHover}
-              onMouseLeave={handleButtonLeave}
-            >
+            <Button className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
               Get Started
             </Button>
           </div>
@@ -230,8 +144,6 @@ export function Navbar() {
                   variant="ghost"
                   size="sm"
                   className="p-2 text-slate-700 hover:text-purple-600"
-                  onMouseEnter={handleButtonHover}
-                  onMouseLeave={handleButtonLeave}
                 >
                   <Menu className="h-6 w-6" />
                 </Button>
@@ -265,15 +177,12 @@ export function Navbar() {
                   </div>
 
                   <div className="flex flex-col space-y-6">
-                    {navigation.map((item, index) => (
+                    {navigation.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
                         className="text-slate-700 hover:text-purple-600 px-3 py-3 text-lg font-semibold transition-all duration-300 hover:bg-purple-50 rounded-lg"
                         onClick={() => setIsMobileMenuOpen(false)}
-                        style={{
-                          animationDelay: `${index * 0.1}s`,
-                        }}
                       >
                         {item.name}
                       </Link>

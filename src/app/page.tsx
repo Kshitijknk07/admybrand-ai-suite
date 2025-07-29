@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/layout/navbar";
-import { Button } from "@/components/ui/button";
+import { HeroSection } from "@/components/sections/hero-section";
 import {
   Card,
   CardContent,
@@ -12,62 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-
-      {/* Hero Section */}
-      <section
-        id="hero"
-        className="pt-20 lg:pt-24 min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-purple-50/30"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-12 max-w-5xl mx-auto">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold text-slate-900 leading-tight">
-                  Transform Your Brand with
-                  <span className="block bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent">
-                    AI-Powered Marketing
-                  </span>
-                </h1>
-                <p className="text-xl sm:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium">
-                  ADmyBRAND AI Suite helps you create, manage, and optimize your
-                  marketing campaigns with cutting-edge artificial intelligence.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                size="lg"
-                className="text-lg px-10 py-6 bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 hover:from-purple-700 hover:via-purple-800 hover:to-purple-900 text-white font-semibold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-10 py-6 border-2 border-slate-300 text-slate-700 hover:border-purple-300 hover:text-purple-700 hover:bg-purple-50 font-semibold transition-all duration-300"
-              >
-                Watch Demo
-              </Button>
-            </div>
-
-            <div className="flex items-center justify-center space-x-12 text-sm text-slate-500">
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full shadow-lg"></div>
-                <span className="font-medium">No credit card required</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full shadow-lg"></div>
-                <span className="font-medium">14-day free trial</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-3 h-3 bg-emerald-500 rounded-full shadow-lg"></div>
-                <span className="font-medium">Cancel anytime</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
       <section id="features" className="py-20 lg:py-32 bg-white">
