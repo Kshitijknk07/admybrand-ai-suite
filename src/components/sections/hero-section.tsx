@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { gsap } from "gsap";
@@ -303,21 +302,6 @@ export function HeroSection() {
                     Join thousands of successful brands using ADmyBRAND AI Suite
                     to transform their marketing.
                   </p>
-                </div>
-                <div className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 w-40 h-40 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
-                  <svg
-                    className="w-20 h-20 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
                 </div>
               </WobbleCard>
             </div>
