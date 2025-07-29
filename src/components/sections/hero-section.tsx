@@ -187,7 +187,7 @@ export function HeroSection() {
                 <span className="block font-extrabold text-slate-800">
                   Brand with
                 </span>
-                <div className="block mt-2 min-h-[1.2em]">
+                <div className="block mt-2 min-h-[1.4em] leading-[1.2]">
                   <DynamicTextGenerator
                     phrases={[
                       "AI-Powered Marketing",
@@ -196,7 +196,7 @@ export function HeroSection() {
                       "Automated Growth",
                       "Intelligent Analytics",
                     ]}
-                    className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent font-black whitespace-nowrap"
+                    className="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 bg-clip-text text-transparent font-black whitespace-nowrap leading-[1.2]"
                     cursorClassName="bg-purple-600"
                     speed={0.06}
                     loopDelay={3}
