@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { gsap } from "gsap";
