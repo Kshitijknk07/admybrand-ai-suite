@@ -1,27 +1,28 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroImage from "@/assets/hero-dashboard.jpg";
 import Image from "next/image";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export const Hero = () => {
-  const [displayedText, setDisplayedText] = useState("");
-  const targetText = "AI-Powered";
-
-  useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= targetText.length) {
-        setDisplayedText(targetText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 120);
-
-    return () => clearInterval(interval);
-  }, []);
+  const marketingKeywords = [
+    "AI-Powered",
+    "Data-Driven",
+    "Intelligent",
+    "Automated",
+    "Smart",
+    "Predictive",
+    "Real-Time",
+    "Scalable",
+    "Optimized",
+    "Personalized",
+    "Dynamic",
+    "Adaptive",
+    "Proactive",
+    "Strategic",
+    "Innovative",
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -82,13 +83,11 @@ export const Hero = () => {
                   Transform Your Marketing with{" "}
                 </span>
                 <span className="text-primary font-extrabold inline-block min-w-[280px]">
-                  {displayedText}
-                  {displayedText.length < targetText.length && (
-                    <span className="animate-pulse">|</span>
-                  )}
-                  {displayedText.length === 0 && (
-                    <span className="opacity-30">AI-Powered</span>
-                  )}
+                  <FlipWords
+                    words={marketingKeywords}
+                    duration={2000}
+                    className="text-primary font-extrabold"
+                  />
                 </span>
                 <span className="text-foreground"> Intelligence</span>
               </h1>
