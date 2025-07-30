@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Slider } from '@/components/ui/slider';
 import {
   Calculator,
   TrendingUp,
@@ -12,7 +12,7 @@ import {
   Target,
   Rocket,
   Crown,
-} from "lucide-react";
+} from 'lucide-react';
 
 const PricingCalculator = () => {
   const [monthlyBudget, setMonthlyBudget] = useState([5000]);
@@ -48,13 +48,13 @@ const PricingCalculator = () => {
   // ROI Calculation Scenarios - Real calculations with detailed breakdowns
   const roiScenarios = [
     {
-      title: "Startup Growth",
+      title: 'Startup Growth',
       description: `Perfect for early-stage companies. With $${monthlyBudget[0].toLocaleString()} budget and ${
         teamSize[0]
       } team members, achieve ${roiPercentage.toFixed(
         0
       )}% ROI increase through AI automation.`,
-      link: "#startup",
+      link: '#startup',
       icon: Zap,
       savings: totalSavings,
       roi: roiPercentage,
@@ -67,13 +67,13 @@ const PricingCalculator = () => {
       },
     },
     {
-      title: "Agency Scale",
+      title: 'Agency Scale',
       description: `Scale your agency operations. Handle ${
         campaigns[0]
       } campaigns efficiently with AI automation, reducing manual work by ${(
         timeSaved * 1.5
       ).toFixed(0)}h monthly.`,
-      link: "#agency",
+      link: '#agency',
       icon: Target,
       savings: totalSavings * 1.3,
       roi: roiPercentage * 1.3,
@@ -86,13 +86,13 @@ const PricingCalculator = () => {
       },
     },
     {
-      title: "Enterprise ROI",
+      title: 'Enterprise ROI',
       description: `Enterprise-grade optimization for large teams. With ${
         teamSize[0]
       } team members, achieve ${(roiPercentage * 1.4).toFixed(
         0
       )}% ROI through advanced AI features.`,
-      link: "#enterprise",
+      link: '#enterprise',
       icon: Crown,
       savings: totalSavings * 1.8,
       roi: roiPercentage * 1.4,
@@ -105,13 +105,13 @@ const PricingCalculator = () => {
       },
     },
     {
-      title: "Campaign Mastery",
+      title: 'Campaign Mastery',
       description: `Master ${
         campaigns[0]
       } campaigns with AI precision. Optimize every dollar spent and achieve ${(
         roiPercentage * 1.1
       ).toFixed(0)}% ROI through intelligent automation.`,
-      link: "#campaigns",
+      link: '#campaigns',
       icon: Rocket,
       savings: totalSavings * 0.9,
       roi: roiPercentage * 1.1,
@@ -124,13 +124,13 @@ const PricingCalculator = () => {
       },
     },
     {
-      title: "Team Efficiency",
+      title: 'Team Efficiency',
       description: `Boost team productivity by ${productivityIncrease.toFixed(
         0
       )}%. Save ${timeSaved}h monthly per person and achieve ${roiPercentage.toFixed(
         0
       )}% ROI without hiring.`,
-      link: "#efficiency",
+      link: '#efficiency',
       icon: Users,
       savings: totalSavings,
       roi: roiPercentage,
@@ -143,11 +143,11 @@ const PricingCalculator = () => {
       },
     },
     {
-      title: "Budget Optimization",
+      title: 'Budget Optimization',
       description: `Optimize your $${monthlyBudget[0].toLocaleString()} budget with AI insights. Achieve ${costReduction.toFixed(
         0
       )}% cost reduction and ${(roiPercentage * 1.2).toFixed(0)}% ROI.`,
-      link: "#budget",
+      link: '#budget',
       icon: DollarSign,
       savings: aiOptimization + campaignEfficiency,
       roi: roiPercentage * 1.2,

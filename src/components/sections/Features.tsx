@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 import {
   Brain,
   Target,
@@ -13,56 +13,56 @@ import {
   Clock,
   DollarSign,
   Sparkles,
-} from "lucide-react";
+} from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
-      title: "AI Campaign Generator",
+      title: 'AI Campaign Generator',
       description:
-        "Generate high-converting campaigns in seconds with our advanced AI that learns from millions of successful campaigns.",
+        'Generate high-converting campaigns in seconds with our advanced AI that learns from millions of successful campaigns.',
       icon: <Brain className="w-8 h-8" />,
     },
     {
-      title: "Smart Budget Optimizer",
+      title: 'Smart Budget Optimizer',
       description:
-        "Automatically optimize your ad spend across channels using predictive algorithms that maximize your ROI.",
+        'Automatically optimize your ad spend across channels using predictive algorithms that maximize your ROI.',
       icon: <Target className="w-8 h-8" />,
     },
     {
-      title: "Conversion Forecasting",
+      title: 'Conversion Forecasting',
       description:
-        "Predict campaign performance with 94% accuracy using machine learning models trained on real market data.",
+        'Predict campaign performance with 94% accuracy using machine learning models trained on real market data.',
       icon: <TrendingUp className="w-8 h-8" />,
     },
     {
-      title: "Multi-Channel Publishing",
+      title: 'Multi-Channel Publishing',
       description:
-        "Distribute your campaigns across all major platforms with one click, maintaining brand consistency everywhere.",
+        'Distribute your campaigns across all major platforms with one click, maintaining brand consistency everywhere.',
       icon: <Share2 className="w-8 h-8" />,
     },
     {
-      title: "Real-time Analytics",
+      title: 'Real-time Analytics',
       description:
-        "Monitor all your campaigns in one unified dashboard with live updates and actionable insights.",
+        'Monitor all your campaigns in one unified dashboard with live updates and actionable insights.',
       icon: <BarChart3 className="w-8 h-8" />,
     },
     {
-      title: "AI Copywriter",
+      title: 'AI Copywriter',
       description:
         "Create compelling ad copy that converts using AI trained on the world's best-performing advertisements.",
       icon: <PenTool className="w-8 h-8" />,
     },
     {
-      title: "Lightning Fast Setup",
+      title: 'Lightning Fast Setup',
       description:
-        "Go from signup to first campaign in under 60 seconds with our intelligent onboarding system.",
+        'Go from signup to first campaign in under 60 seconds with our intelligent onboarding system.',
       icon: <Zap className="w-8 h-8" />,
     },
     {
-      title: "Enterprise Security",
+      title: 'Enterprise Security',
       description:
-        "Bank-level security with SOC 2 compliance, end-to-end encryption, and 99.9% uptime guarantee.",
+        'Bank-level security with SOC 2 compliance, end-to-end encryption, and 99.9% uptime guarantee.',
       icon: <Shield className="w-8 h-8" />,
     },
   ];
@@ -75,7 +75,7 @@ const Features = () => {
         <div className="absolute top-20 right-1/3 w-[300px] h-[300px] bg-gradient-to-bl from-purple-500/3 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-t from-cyan-500/3 to-transparent rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
@@ -156,9 +156,9 @@ const Feature = ({
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
       className={cn(
-        "flex flex-col lg:border-r border-card-border py-10 relative group/feature",
-        (index === 0 || index === 4) && "lg:border-l border-card-border",
-        index < 4 && "lg:border-b border-card-border"
+        'flex flex-col lg:border-r border-card-border py-10 relative group/feature',
+        (index === 0 || index === 4) && 'lg:border-l border-card-border',
+        index < 4 && 'lg:border-b border-card-border'
       )}
     >
       {index < 4 && (

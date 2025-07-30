@@ -1,39 +1,39 @@
-import { motion } from "framer-motion";
-import { Sparkles, Twitter, Linkedin, Github, Mail } from "lucide-react";
+import { motion } from 'framer-motion';
+import { Sparkles, Twitter, Linkedin, Github, Mail } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
     Product: [
-      { name: "Features", href: "#features" },
-      { name: "Pricing", href: "#pricing" },
-      { name: "Security", href: "#security" },
-      { name: "Integrations", href: "#integrations" },
+      { name: 'Features', href: '#features' },
+      { name: 'Pricing', href: '#pricing' },
+      { name: 'Security', href: '#security' },
+      { name: 'Integrations', href: '#integrations' },
     ],
     Company: [
-      { name: "About Us", href: "#about" },
-      { name: "Careers", href: "#careers" },
-      { name: "Contact", href: "#contact" },
-      { name: "Blog", href: "#blog" },
+      { name: 'About Us', href: '#about' },
+      { name: 'Careers', href: '#careers' },
+      { name: 'Contact', href: '#contact' },
+      { name: 'Blog', href: '#blog' },
     ],
     Resources: [
-      { name: "Documentation", href: "#docs" },
-      { name: "Help Center", href: "#help" },
-      { name: "API Reference", href: "#api" },
-      { name: "Status", href: "#status" },
+      { name: 'Documentation', href: '#docs' },
+      { name: 'Help Center', href: '#help' },
+      { name: 'API Reference', href: '#api' },
+      { name: 'Status', href: '#status' },
     ],
     Legal: [
-      { name: "Privacy Policy", href: "#privacy" },
-      { name: "Terms of Service", href: "#terms" },
-      { name: "Cookie Policy", href: "#cookies" },
-      { name: "GDPR", href: "#gdpr" },
+      { name: 'Privacy Policy', href: '#privacy' },
+      { name: 'Terms of Service', href: '#terms' },
+      { name: 'Cookie Policy', href: '#cookies' },
+      { name: 'GDPR', href: '#gdpr' },
     ],
   };
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Mail, href: "#", label: "Email" },
+    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Mail, href: '#', label: 'Email' },
   ];
 
   return (
@@ -59,8 +59,9 @@ const Footer = () => {
                 </span>
               </div>
               <p className="text-muted-foreground leading-relaxed max-w-sm">
-                The most advanced AI-powered marketing suite that transforms how businesses 
-                create, optimize, and scale their marketing campaigns.
+                The most advanced AI-powered marketing suite that transforms how
+                businesses create, optimize, and scale their marketing
+                campaigns.
               </p>
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social, index) => (
@@ -83,35 +84,40 @@ const Footer = () => {
           </div>
 
           {/* Links Sections */}
-          {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
-            <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 + categoryIndex * 0.1 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <h3 className="font-semibold text-foreground">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <li key={link.name}>
-                    <motion.a
-                      href={link.href}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.2 + categoryIndex * 0.1 + linkIndex * 0.05 }}
-                      viewport={{ once: true }}
-                      whileHover={{ x: 5 }}
-                      className="text-muted-foreground hover:text-primary transition-all duration-300 text-sm block"
-                    >
-                      {link.name}
-                    </motion.a>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          {Object.entries(footerLinks).map(
+            ([category, links], categoryIndex) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 + categoryIndex * 0.1 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <h3 className="font-semibold text-foreground">{category}</h3>
+                <ul className="space-y-3">
+                  {links.map((link, linkIndex) => (
+                    <li key={link.name}>
+                      <motion.a
+                        href={link.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.4,
+                          delay: 0.2 + categoryIndex * 0.1 + linkIndex * 0.05,
+                        }}
+                        viewport={{ once: true }}
+                        whileHover={{ x: 5 }}
+                        className="text-muted-foreground hover:text-primary transition-all duration-300 text-sm block"
+                      >
+                        {link.name}
+                      </motion.a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )
+          )}
         </div>
 
         {/* Newsletter Section */}
@@ -126,7 +132,8 @@ const Footer = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-2">Stay Updated</h3>
               <p className="text-muted-foreground">
-                Get the latest insights on AI marketing trends, best practices, and product updates.
+                Get the latest insights on AI marketing trends, best practices,
+                and product updates.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">

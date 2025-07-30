@@ -1,7 +1,7 @@
-"use client";
-import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 type Card = {
   id: number;
@@ -20,23 +20,23 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   const handleOutsideClick = () => {
-    setLastSelected(selected);  
+    setLastSelected(selected);
     setSelected(null);
   };
 
   return (
     <div className="w-full min-h-[600px] p-4 md:p-10 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "min-h-[300px]")}>
+        <div key={i} className={cn(card.className, 'min-h-[300px]')}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
-              "relative overflow-hidden cursor-pointer min-h-[300px]",
+              'relative overflow-hidden cursor-pointer min-h-[300px]',
               selected?.id === card.id
-                ? "rounded-lg fixed inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
+                ? 'rounded-lg fixed inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col'
                 : lastSelected?.id === card.id
-                ? "z-40 glass border-card-border rounded-xl h-full w-full"
-                : "glass border-card-border rounded-xl h-full w-full hover:border-primary/30 transition-all duration-300"
+                  ? 'z-40 glass border-card-border rounded-xl h-full w-full'
+                  : 'glass border-card-border rounded-xl h-full w-full hover:border-primary/30 transition-all duration-300'
             )}
             layout
             whileHover={{ scale: selected?.id === card.id ? 1 : 1.02 }}
@@ -50,8 +50,8 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       <motion.div
         onClick={handleOutsideClick}
         className={cn(
-          "absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10",
-          selected?.id ? "pointer-events-auto" : "pointer-events-none"
+          'absolute h-full w-full left-0 top-0 bg-black opacity-0 z-10',
+          selected?.id ? 'pointer-events-auto' : 'pointer-events-none'
         )}
         animate={{ opacity: selected?.id ? 0.3 : 0 }}
       />
@@ -68,13 +68,13 @@ const ImageComponent = ({ card }: { card: Card }) => {
         height="500"
         width="500"
         className={cn(
-          "object-cover object-center absolute inset-0 h-full w-full transition duration-200"
+          'object-cover object-center absolute inset-0 h-full w-full transition duration-200'
         )}
         alt="thumbnail"
       />
       {/* Gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-      
+
       {/* Content overlay */}
       <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
         {card.content}
@@ -111,7 +111,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
         }}
         transition={{
           duration: 0.3,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
         className="relative px-8 pb-4 z-[70]"
       >

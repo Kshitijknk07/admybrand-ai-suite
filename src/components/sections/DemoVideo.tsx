@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Play, Pause, Volume2, Maximize } from "lucide-react";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Play, Pause, Volume2, Maximize } from 'lucide-react';
 
 const DemoVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -84,7 +84,7 @@ const DemoVideo = () => {
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                         className="w-16 h-16 border-4 border-white border-t-transparent rounded-full mx-auto mb-4"
-                        style={{ borderTopColor: "transparent" }}
+                        style={{ borderTopColor: 'transparent' }}
                       />
                       <p className="text-lg">Demo video would load here</p>
                       <p className="text-sm text-white/60 mt-2">
@@ -145,18 +145,18 @@ const DemoVideo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
-                title: "3-Minute Overview",
-                description: "Complete platform walkthrough in under 3 minutes",
+                title: '3-Minute Overview',
+                description: 'Complete platform walkthrough in under 3 minutes',
               },
               {
-                title: "Real Campaigns",
+                title: 'Real Campaigns',
                 description:
-                  "See actual results from successful AI-generated campaigns",
+                  'See actual results from successful AI-generated campaigns',
               },
               {
-                title: "Live Dashboard",
+                title: 'Live Dashboard',
                 description:
-                  "Watch real-time analytics and optimization in action",
+                  'Watch real-time analytics and optimization in action',
               },
             ].map((benefit, index) => (
               <div key={benefit.title} className="text-center">

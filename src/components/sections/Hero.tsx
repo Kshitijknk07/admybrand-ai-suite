@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, TrendingUp, Zap, Target } from "lucide-react";
-import { FlipWords } from "@/components/ui/flip-words";
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Play, TrendingUp, Zap, Target } from 'lucide-react';
+import { FlipWords } from '@/components/ui/flip-words';
 
 const Hero = () => {
   return (
@@ -12,18 +12,18 @@ const Hero = () => {
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/25 rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
+          style={{ animationDelay: '2s' }}
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-to-r from-blue-600/18 via-purple-600/18 to-pink-600/18 rounded-full blur-3xl" />
 
         {/* Flow gradient orbs that extend beyond section - Enhanced */}
         <div
           className="absolute top-10 right-1/4 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
+          style={{ animationDelay: '4s' }}
         />
         <div
           className="absolute bottom-10 left-1/4 w-[500px] h-[500px] bg-indigo-500/18 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "6s" }}
+          style={{ animationDelay: '6s' }}
         />
 
         {/* Enhanced flowing elements that extend to next sections */}
@@ -34,27 +34,27 @@ const Hero = () => {
         {/* Enhanced Floating particles */}
         <div
           className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-400/60 rounded-full animate-pulse shadow-lg shadow-blue-400/40"
-          style={{ animationDelay: "0s" }}
+          style={{ animationDelay: '0s' }}
         />
         <div
           className="absolute top-1/3 right-1/3 w-2.5 h-2.5 bg-purple-400/70 rounded-full animate-pulse shadow-lg shadow-purple-400/40"
-          style={{ animationDelay: "1s" }}
+          style={{ animationDelay: '1s' }}
         />
         <div
           className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-cyan-400/60 rounded-full animate-pulse shadow-lg shadow-cyan-400/40"
-          style={{ animationDelay: "2s" }}
+          style={{ animationDelay: '2s' }}
         />
         <div
           className="absolute top-2/3 right-1/4 w-2.5 h-2.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg shadow-pink-400/40"
-          style={{ animationDelay: "3s" }}
+          style={{ animationDelay: '3s' }}
         />
         <div
           className="absolute top-1/6 right-1/5 w-2 h-2 bg-indigo-400/50 rounded-full animate-pulse shadow-lg shadow-indigo-400/30"
-          style={{ animationDelay: "4s" }}
+          style={{ animationDelay: '4s' }}
         />
         <div
           className="absolute bottom-1/6 right-2/3 w-2.5 h-2.5 bg-violet-400/60 rounded-full animate-pulse shadow-lg shadow-violet-400/40"
-          style={{ animationDelay: "5s" }}
+          style={{ animationDelay: '5s' }}
         />
 
         {/* Animated grid pattern */}
@@ -63,7 +63,7 @@ const Hero = () => {
             className="absolute inset-0"
             style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-              backgroundSize: "50px 50px",
+              backgroundSize: '50px 50px',
             }}
           />
         </div>
@@ -71,11 +71,11 @@ const Hero = () => {
         {/* Floating geometric shapes */}
         <div
           className="absolute top-1/4 right-1/4 w-16 h-16 border border-primary/20 rounded-lg rotate-45 animate-float"
-          style={{ animationDelay: "1s", animationDuration: "6s" }}
+          style={{ animationDelay: '1s', animationDuration: '6s' }}
         />
         <div
           className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-accent/20 rounded-full animate-float"
-          style={{ animationDelay: "3s", animationDuration: "8s" }}
+          style={{ animationDelay: '3s', animationDuration: '8s' }}
         />
 
         {/* Enhanced Gradient mesh */}
@@ -93,7 +93,7 @@ const Hero = () => {
       {/* Enhanced Floating Elements */}
       <motion.div
         animate={{ y: [0, -20, 0], rotate: [0, 2, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute top-32 right-20 glass rounded-2xl p-4 hidden lg:block hover:scale-105 transition-transform cursor-pointer"
       >
         <div className="flex items-center space-x-3">
@@ -106,7 +106,7 @@ const Hero = () => {
             <div className="w-full bg-muted rounded-full h-1 mt-1">
               <div
                 className="bg-gradient-primary h-1 rounded-full animate-pulse"
-                style={{ width: "85%" }}
+                style={{ width: '85%' }}
               />
             </div>
           </div>
@@ -118,7 +118,7 @@ const Hero = () => {
         transition={{
           duration: 3,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
           delay: 1,
         }}
         className="absolute bottom-32 left-20 glass rounded-2xl p-4 hidden lg:block hover:scale-105 transition-transform cursor-pointer"
@@ -134,11 +134,11 @@ const Hero = () => {
               <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
               <div
                 className="w-1 h-1 bg-accent rounded-full animate-pulse"
-                style={{ animationDelay: "0.2s" }}
+                style={{ animationDelay: '0.2s' }}
               />
               <div
                 className="w-1 h-1 bg-accent rounded-full animate-pulse"
-                style={{ animationDelay: "0.4s" }}
+                style={{ animationDelay: '0.4s' }}
               />
             </div>
           </div>
@@ -151,7 +151,7 @@ const Hero = () => {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
           delay: 2,
         }}
         className="absolute top-1/2 left-10 glass rounded-2xl p-3 hidden xl:block hover:scale-105 transition-transform cursor-pointer"
@@ -199,14 +199,14 @@ const Hero = () => {
             <br />
             <FlipWords
               words={[
-                "That Converts.",
-                "That Sells.",
-                "That Inspires.",
-                "That Grows.",
-                "That Wins.",
-                "That Engages.",
-                "That Performs.",
-                "That Delivers.",
+                'That Converts.',
+                'That Sells.',
+                'That Inspires.',
+                'That Grows.',
+                'That Wins.',
+                'That Engages.',
+                'That Performs.',
+                'That Delivers.',
               ]}
               duration={2200}
               className="text-5xl md:text-7xl font-bold text-purple-600"

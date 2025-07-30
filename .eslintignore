@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+
+# Build outputs
+*.local
+build/
+
+# Lock files
+package-lock.json
+pnpm-lock.yaml
+bun.lockb
+
+# Generated files
+*.log
+*.tsbuildinfo
+
+# Environment files
+.env*
+!.env.example
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Config files
+*.config.js
+*.config.ts
+vite.config.ts
+tailwind.config.ts
+postcss.config.js
+
+# Public assets
+public/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+*.tmp
+*.temp 

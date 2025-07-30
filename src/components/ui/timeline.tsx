@@ -1,11 +1,11 @@
-"use client";
+'use client';
 import {
   useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
-} from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+} from 'motion/react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface TimelineEntry {
   title: string;
@@ -26,7 +26,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ['start 10%', 'end 50%'],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
@@ -66,13 +66,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-3xl mb-6 text-left font-bold text-foreground">
                 {item.title}
               </h3>
-              {item.content}{" "}
+              {item.content}{' '}
             </div>
           </div>
         ))}
         <div
           style={{
-            height: height + "px",
+            height: height + 'px',
           }}
           className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-border to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >

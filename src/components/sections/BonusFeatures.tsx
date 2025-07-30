@@ -1,10 +1,10 @@
-import React from "react";
-import { Timeline } from "../ui/timeline";
+import React from 'react';
+import { Timeline } from '../ui/timeline';
 
 const BonusFeatures = () => {
   const timelineData = [
     {
-      title: "2024",
+      title: '2024',
       content: (
         <div>
           <p className="mb-8 text-base font-normal text-muted-foreground md:text-lg leading-relaxed">
@@ -32,7 +32,7 @@ const BonusFeatures = () => {
       ),
     },
     {
-      title: "Q3 2024",
+      title: 'Q3 2024',
       content: (
         <div>
           <p className="mb-8 text-base font-normal text-muted-foreground md:text-lg leading-relaxed">
@@ -64,7 +64,7 @@ const BonusFeatures = () => {
       ),
     },
     {
-      title: "Q4 2024",
+      title: 'Q4 2024',
       content: (
         <div>
           <p className="mb-8 text-base font-normal text-muted-foreground md:text-lg leading-relaxed">

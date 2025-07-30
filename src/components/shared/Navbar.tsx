@@ -1,27 +1,27 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Timeline", href: "#timeline" },
-    { name: "ROI Calculator", href: "#pricing-calculator" },
-    { name: "In Action", href: "#demo-video" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact Us", href: "#contact" },
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Timeline', href: '#timeline' },
+    { name: 'ROI Calculator', href: '#pricing-calculator' },
+    { name: 'In Action', href: '#demo-video' },
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'FAQ', href: '#faq' },
+    { name: 'Contact Us', href: '#contact' },
   ];
 
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       className="fixed top-0 left-0 right-0 z-50 glass border-b border-glass-border"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,14 +100,14 @@ const Navbar = () => {
         <motion.div
           initial={false}
           animate={{
-            height: isOpen ? "auto" : 0,
+            height: isOpen ? 'auto' : 0,
             opacity: isOpen ? 1 : 0,
           }}
           transition={{ duration: 0.3 }}
           className="lg:hidden overflow-hidden"
         >
           <div className="py-6 space-y-2">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <a
                 key={item.name}
                 href={item.href}

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Star, Zap, Crown, Sparkles, ArrowRight, X } from "lucide-react";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Check, Star, Zap, Crown, Sparkles, ArrowRight, X } from 'lucide-react';
 
 // Feature Badge Component for Clean Comparison Table
 const FeatureBadge = ({
@@ -30,113 +30,113 @@ const Pricing = () => {
 
   const plans = [
     {
-      id: "starter",
-      name: "Starter",
+      id: 'starter',
+      name: 'Starter',
       icon: Star,
-      description: "Perfect for individuals and small teams",
+      description: 'Perfect for individuals and small teams',
       monthlyPrice: 0,
       annualPrice: 0,
       features: [
-        "5 AI-generated campaigns per month",
-        "Basic analytics dashboard",
-        "Email support",
-        "1 social media platform",
-        "Standard templates",
-        "Community access",
+        '5 AI-generated campaigns per month',
+        'Basic analytics dashboard',
+        'Email support',
+        '1 social media platform',
+        'Standard templates',
+        'Community access',
       ],
       limitations: [
-        "No advanced AI optimization",
-        "No multi-channel publishing",
-        "No priority support",
+        'No advanced AI optimization',
+        'No multi-channel publishing',
+        'No priority support',
       ],
-      cta: "Get Started Free",
+      cta: 'Get Started Free',
       popular: false,
-      gradient: "from-slate-500 to-slate-600",
-      color: "slate",
+      gradient: 'from-slate-500 to-slate-600',
+      color: 'slate',
     },
     {
-      id: "pro",
-      name: "Pro",
+      id: 'pro',
+      name: 'Pro',
       icon: Zap,
-      description: "Best for growing businesses and agencies",
+      description: 'Best for growing businesses and agencies',
       monthlyPrice: 49,
       annualPrice: 39,
       features: [
-        "Unlimited AI campaigns",
-        "Advanced performance analytics",
-        "Priority support",
-        "All social media platforms",
-        "Custom templates & branding",
-        "A/B testing suite",
-        "Conversion forecasting",
-        "Smart budget optimization",
-        "Team collaboration",
-        "API access",
+        'Unlimited AI campaigns',
+        'Advanced performance analytics',
+        'Priority support',
+        'All social media platforms',
+        'Custom templates & branding',
+        'A/B testing suite',
+        'Conversion forecasting',
+        'Smart budget optimization',
+        'Team collaboration',
+        'API access',
       ],
-      limitations: ["No white-label solution", "No custom integrations"],
-      cta: "Start Pro Trial",
+      limitations: ['No white-label solution', 'No custom integrations'],
+      cta: 'Start Pro Trial',
       popular: true,
-      gradient: "from-purple-500 via-pink-500 to-orange-500",
-      color: "purple",
+      gradient: 'from-purple-500 via-pink-500 to-orange-500',
+      color: 'purple',
     },
     {
-      id: "enterprise",
-      name: "Enterprise",
+      id: 'enterprise',
+      name: 'Enterprise',
       icon: Crown,
-      description: "For large organizations and enterprises",
+      description: 'For large organizations and enterprises',
       monthlyPrice: 199,
       annualPrice: 159,
       features: [
-        "Everything in Pro",
-        "White-label solution",
-        "Custom integrations",
-        "Dedicated account manager",
-        "Custom AI model training",
-        "Advanced security & compliance",
-        "Unlimited API access",
-        "Custom reporting & dashboards",
-        "24/7 phone support",
-        "On-premise deployment",
-        "Custom SLA",
+        'Everything in Pro',
+        'White-label solution',
+        'Custom integrations',
+        'Dedicated account manager',
+        'Custom AI model training',
+        'Advanced security & compliance',
+        'Unlimited API access',
+        'Custom reporting & dashboards',
+        '24/7 phone support',
+        'On-premise deployment',
+        'Custom SLA',
       ],
       limitations: [],
-      cta: "Contact Sales",
+      cta: 'Contact Sales',
       popular: false,
-      gradient: "from-amber-500 via-orange-500 to-red-500",
-      color: "amber",
+      gradient: 'from-amber-500 via-orange-500 to-red-500',
+      color: 'amber',
     },
   ];
 
   const comparisonFeatures = [
     {
-      feature: "AI Campaigns",
-      starter: { value: "5/month", available: true },
-      pro: { value: "Unlimited", available: true },
-      enterprise: { value: "Unlimited", available: true },
+      feature: 'AI Campaigns',
+      starter: { value: '5/month', available: true },
+      pro: { value: 'Unlimited', available: true },
+      enterprise: { value: 'Unlimited', available: true },
     },
     {
-      feature: "Platforms",
-      starter: { value: "1 platform", available: true },
-      pro: { value: "All platforms", available: true },
-      enterprise: { value: "All + Custom", available: true },
+      feature: 'Platforms',
+      starter: { value: '1 platform', available: true },
+      pro: { value: 'All platforms', available: true },
+      enterprise: { value: 'All + Custom', available: true },
     },
     {
-      feature: "Analytics",
-      starter: { value: "Basic", available: true },
-      pro: { value: "Advanced", available: true },
-      enterprise: { value: "Custom", available: true },
+      feature: 'Analytics',
+      starter: { value: 'Basic', available: true },
+      pro: { value: 'Advanced', available: true },
+      enterprise: { value: 'Custom', available: true },
     },
     {
-      feature: "Support",
-      starter: { value: "Email", available: true },
-      pro: { value: "Priority", available: true },
-      enterprise: { value: "24/7 Dedicated", available: true },
+      feature: 'Support',
+      starter: { value: 'Email', available: true },
+      pro: { value: 'Priority', available: true },
+      enterprise: { value: '24/7 Dedicated', available: true },
     },
     {
-      feature: "API Access",
-      starter: { value: "No", available: false },
-      pro: { value: "Yes", available: true },
-      enterprise: { value: "Full", available: true },
+      feature: 'API Access',
+      starter: { value: 'No', available: false },
+      pro: { value: 'Yes', available: true },
+      enterprise: { value: 'Full', available: true },
     },
   ];
 
@@ -147,7 +147,7 @@ const Pricing = () => {
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/4 rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/4 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
+          style={{ animationDelay: '2s' }}
         />
         <div className="absolute -top-32 right-1/4 w-[600px] h-[600px] bg-gradient-to-b from-cyan-500/3 to-transparent rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-gradient-to-r from-indigo-500/3 to-transparent rounded-full blur-3xl" />
@@ -185,8 +185,8 @@ const Pricing = () => {
               onClick={() => setIsAnnual(false)}
               className={`px-8 py-3 text-sm font-semibold rounded-xl transition-all duration-300 ${
                 !isAnnual
-                  ? "bg-gradient-primary text-white shadow-lg"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? 'bg-gradient-primary text-white shadow-lg'
+                  : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               Monthly
@@ -195,8 +195,8 @@ const Pricing = () => {
               onClick={() => setIsAnnual(true)}
               className={`px-8 py-3 text-sm font-semibold rounded-xl transition-all duration-300 relative ${
                 isAnnual
-                  ? "bg-gradient-primary text-white shadow-lg"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? 'bg-gradient-primary text-white shadow-lg'
+                  : 'text-muted-foreground hover:text-foreground'
               }`}
             >
               Annual
@@ -321,7 +321,7 @@ const Pricing = () => {
                   {/* Button Section - Fixed at Bottom */}
                   <div className="mt-auto pt-6 border-t border-card-border/50">
                     <Button
-                      variant={plan.popular ? "premium" : "outline"}
+                      variant={plan.popular ? 'premium' : 'outline'}
                       className="w-full h-12 text-base font-semibold"
                       size="lg"
                       onClick={() => setSelectedPlan(plan.id)}
@@ -412,11 +412,10 @@ const Pricing = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="glass rounded-3xl p-8 max-w-md w-full"
-              onClick={(e) => e.stopPropagation()}
+              onClick={e => e.stopPropagation()}
             >
               <h3 className="text-2xl font-bold mb-4">
-                Get Started with{" "}
-                {plans.find((p) => p.id === selectedPlan)?.name}
+                Get Started with {plans.find(p => p.id === selectedPlan)?.name}
               </h3>
               <p className="text-muted-foreground mb-6">
                 Ready to transform your marketing? Let's get you set up with the

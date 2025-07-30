@@ -1,22 +1,22 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
+    name: '',
+    email: '',
+    company: '',
+    message: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -24,27 +24,27 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
     setIsSubmitted(true);
 
     toast({
-      title: "Message sent successfully!",
+      title: 'Message sent successfully!',
       description: "We'll get back to you within 24 hours.",
     });
 
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({ name: '', email: '', company: '', message: '' });
     }, 3000);
   };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -53,21 +53,21 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email Us",
-      value: "hello@admybrand.ai",
-      description: "Get in touch for any questions",
+      title: 'Email Us',
+      value: 'hello@admybrand.ai',
+      description: 'Get in touch for any questions',
     },
     {
       icon: Phone,
-      title: "Call Us",
-      value: "+1 (555) 123-4567",
-      description: "Mon-Fri 9AM-6PM EST",
+      title: 'Call Us',
+      value: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST',
     },
     {
       icon: MapPin,
-      title: "Visit Us",
-      value: "San Francisco, CA",
-      description: "123 Innovation Drive",
+      title: 'Visit Us',
+      value: 'San Francisco, CA',
+      description: '123 Innovation Drive',
     },
   ];
 
@@ -78,15 +78,15 @@ const Contact = () => {
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-blue-500/4 via-indigo-500/3 to-transparent rounded-full blur-3xl animate-float" />
         <div
           className="absolute bottom-20 right-1/3 w-[450px] h-[450px] bg-gradient-to-tl from-purple-500/4 via-pink-500/3 to-transparent rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
+          style={{ animationDelay: '2s' }}
         />
         <div
           className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-gradient-to-l from-indigo-500/3 via-blue-500/2 to-transparent rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "4s" }}
+          style={{ animationDelay: '4s' }}
         />
         <div
           className="absolute top-1/3 left-0 w-[350px] h-[350px] bg-gradient-to-r from-accent/3 via-primary/2 to-transparent rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "1s" }}
+          style={{ animationDelay: '1s' }}
         />
       </div>
 
@@ -95,7 +95,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="text-center mb-20"
         >
@@ -114,7 +114,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
             viewport={{ once: true }}
             className="relative"
           >
@@ -216,7 +216,7 @@ const Contact = () => {
                         transition={{
                           duration: 1,
                           repeat: Infinity,
-                          ease: "linear",
+                          ease: 'linear',
                         }}
                         className="w-6 h-6 border-2 border-white border-t-transparent rounded-full mr-3"
                       />
@@ -226,10 +226,10 @@ const Contact = () => {
                       <Send className="w-6 h-6 mr-3" />
                     )}
                     {isSubmitting
-                      ? "Sending Message..."
+                      ? 'Sending Message...'
                       : isSubmitted
-                      ? "Message Sent Successfully!"
-                      : "Send Message"}
+                        ? 'Message Sent Successfully!'
+                        : 'Send Message'}
                   </Button>
                 </form>
               </CardContent>
@@ -240,7 +240,7 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
             viewport={{ once: true }}
             className="space-y-10"
           >
@@ -262,7 +262,7 @@ const Contact = () => {
                   transition={{
                     duration: 0.6,
                     delay: 0.6 + index * 0.15,
-                    ease: "easeOut",
+                    ease: 'easeOut',
                   }}
                   viewport={{ once: true }}
                   whileHover={{ x: 8, scale: 1.02 }}
@@ -288,7 +288,7 @@ const Contact = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 1.2, ease: 'easeOut' }}
               viewport={{ once: true }}
               className="glass rounded-2xl p-8 border-l-4 border-l-accent relative overflow-hidden"
             >

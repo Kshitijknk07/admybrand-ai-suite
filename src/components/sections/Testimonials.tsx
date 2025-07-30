@@ -1,42 +1,42 @@
-import { motion } from "framer-motion";
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { motion } from 'framer-motion';
+import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 
 const Testimonials = () => {
   const testimonials = [
     {
       quote:
         "ADmyBRAND AI transformed our marketing completely. We've seen a 347% increase in ROI and our campaigns now practically run themselves. The AI copywriting alone has saved us 20+ hours per week.",
-      name: "Sarah Chen",
-      designation: "CMO at TechFlow Solutions",
-      src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: 'Sarah Chen',
+      designation: 'CMO at TechFlow Solutions',
+      src: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       quote:
         "The conversion forecasting is incredibly accurate. We've been able to allocate budget more effectively and our conversion rates have improved by 156%. This platform pays for itself many times over.",
-      name: "Michael Rodriguez",
-      designation: "Founder & CEO at GrowthLabs",
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: 'Michael Rodriguez',
+      designation: 'Founder & CEO at GrowthLabs',
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       quote:
-        "What used to take our team days now takes minutes. The multi-channel publishing feature ensures our brand voice is consistent everywhere. Our engagement rates have never been higher.",
-      name: "Emily Watson",
-      designation: "Digital Marketing Director at ScaleUp Inc",
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        'What used to take our team days now takes minutes. The multi-channel publishing feature ensures our brand voice is consistent everywhere. Our engagement rates have never been higher.',
+      name: 'Emily Watson',
+      designation: 'Digital Marketing Director at ScaleUp Inc',
+      src: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       quote:
         "The smart budget optimizer is a game-changer. It automatically shifts spend to our best-performing campaigns in real-time. We've reduced wasted ad spend by 78% while increasing overall performance.",
-      name: "David Kim",
-      designation: "Performance Marketing Lead at Digital Dynamics",
-      src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: 'David Kim',
+      designation: 'Performance Marketing Lead at Digital Dynamics',
+      src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
     {
       quote:
         "The AI-powered analytics dashboard gives us insights we never had before. We can now predict campaign performance with 94% accuracy and optimize in real-time. It's like having a crystal ball for marketing.",
-      name: "Lisa Thompson",
-      designation: "VP of Marketing at FutureNet",
-      src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: 'Lisa Thompson',
+      designation: 'VP of Marketing at FutureNet',
+      src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ];
 
