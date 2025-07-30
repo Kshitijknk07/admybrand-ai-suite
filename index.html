@@ -228,11 +228,11 @@
     <!-- Main application script -->
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Analytics and tracking (add your actual tracking codes here) -->
+    <!-- Analytics and tracking -->
     <!-- Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+      src="https://www.googletagmanager.com/gtag/js?id=%VITE_GA_MEASUREMENT_ID%"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -240,7 +240,7 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      gtag('config', '%VITE_GA_MEASUREMENT_ID%');
     </script>
 
     <!-- Service Worker Registration -->
