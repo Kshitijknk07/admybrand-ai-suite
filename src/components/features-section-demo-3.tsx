@@ -1,9 +1,9 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
-import createGlobe from 'cobe';
-import { useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
 import { IconBrandYoutubeFilled } from '@tabler/icons-react';
+import createGlobe from 'cobe';
+import { motion } from 'motion/react';
+import React, { useEffect, useRef } from 'react';
+
+import { cn } from '@/lib/utils';
 
 export default function FeaturesSectionDemo() {
   const features = [
@@ -74,7 +74,7 @@ const FeatureCard = ({
   className?: string;
 }) => {
   return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+    <div className={cn('p-4 sm:p-8 relative overflow-hidden', className)}>
       {children}
     </div>
   );
@@ -176,7 +176,7 @@ export const SkeletonTwo = () => {
         {images.map((image, idx) => (
           <motion.div
             variants={imageVariants}
-            key={'images-first' + idx}
+            key={`images-first${idx}`}
             style={{
               rotate: Math.random() * 20 - 10,
             }}
@@ -197,7 +197,7 @@ export const SkeletonTwo = () => {
       <div className="flex flex-row">
         {images.map((image, idx) => (
           <motion.div
-            key={'images-second' + idx}
+            key={`images-second${idx}`}
             style={{
               rotate: Math.random() * 20 - 10,
             }}

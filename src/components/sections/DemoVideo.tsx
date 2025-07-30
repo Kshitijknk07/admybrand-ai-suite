@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Play, Pause, Volume2, Maximize } from 'lucide-react';
+import { useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 const DemoVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -158,7 +159,7 @@ const DemoVideo = () => {
                 description:
                   'Watch real-time analytics and optimization in action',
               },
-            ].map((benefit, index) => (
+            ].map(benefit => (
               <div key={benefit.title} className="text-center">
                 <h4 className="text-xl font-bold mb-2">{benefit.title}</h4>
                 <p className="text-muted-foreground">{benefit.description}</p>

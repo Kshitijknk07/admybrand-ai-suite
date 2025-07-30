@@ -2,6 +2,7 @@
 
 import { useMotionValue, motion, useMotionTemplate } from 'motion/react';
 import React, { MouseEvent as ReactMouseEvent, useState } from 'react';
+
 import { CanvasRevealEffect } from '@/components/ui/canvas-reveal-effect';
 import { cn } from '@/lib/utils';
 
@@ -23,7 +24,7 @@ export const CardSpotlight = ({
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
@@ -55,6 +56,8 @@ export const CardSpotlight = ({
             )
           `,
         }}
+        role="presentation"
+        aria-hidden="true"
       >
         {isHovering && (
           <CanvasRevealEffect

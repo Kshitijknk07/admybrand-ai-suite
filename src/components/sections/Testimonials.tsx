@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 
 const Testimonials = () => {

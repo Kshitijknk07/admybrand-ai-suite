@@ -1,8 +1,4 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
 import {
   Calculator,
   TrendingUp,
@@ -13,6 +9,11 @@ import {
   Rocket,
   Crown,
 } from 'lucide-react';
+import { useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Slider } from '@/components/ui/slider';
 
 const PricingCalculator = () => {
   const [monthlyBudget, setMonthlyBudget] = useState([5000]);
@@ -58,12 +59,12 @@ const PricingCalculator = () => {
       icon: Zap,
       savings: totalSavings,
       roi: roiPercentage,
-      timeSaved: timeSaved,
+      timeSaved,
       details: {
-        laborSavings: laborSavings,
-        aiOptimization: aiOptimization,
-        campaignEfficiency: campaignEfficiency,
-        productivityIncrease: productivityIncrease,
+        laborSavings,
+        aiOptimization,
+        campaignEfficiency,
+        productivityIncrease,
       },
     },
     {
@@ -134,12 +135,12 @@ const PricingCalculator = () => {
       icon: Users,
       savings: totalSavings,
       roi: roiPercentage,
-      timeSaved: timeSaved,
+      timeSaved,
       details: {
-        laborSavings: laborSavings,
-        aiOptimization: aiOptimization,
-        campaignEfficiency: campaignEfficiency,
-        productivityIncrease: productivityIncrease,
+        laborSavings,
+        aiOptimization,
+        campaignEfficiency,
+        productivityIncrease,
       },
     },
     {

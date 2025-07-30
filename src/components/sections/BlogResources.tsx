@@ -1,9 +1,10 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { LayoutGrid } from '../ui/layout-grid';
+import { Clock } from 'lucide-react';
+import React from 'react';
+
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Clock, ArrowRight } from 'lucide-react';
+
+import { LayoutGrid } from '../ui/layout-grid';
 
 const SkeletonOne = () => {
   return (
@@ -11,7 +12,7 @@ const SkeletonOne = () => {
       <p className="font-bold md:text-4xl text-xl text-white">
         AI Marketing Strategy Guide
       </p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base text-white" />
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Comprehensive guide to implementing AI-powered marketing strategies that
         drive real results. Learn from industry experts and real case studies.
@@ -29,7 +30,7 @@ const SkeletonTwo = () => {
       <p className="font-bold md:text-4xl text-xl text-white">
         Campaign Setup Tutorial
       </p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base text-white" />
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Step-by-step tutorial on setting up your first AI-powered campaign in
         under 5 minutes. Perfect for beginners.
@@ -48,7 +49,7 @@ const SkeletonThree = () => {
       <p className="font-bold md:text-4xl text-xl text-white">
         ROI Success Stories
       </p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base text-white" />
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Real case studies showing how companies achieved 340%+ ROI increases
         using our AI marketing suite. Get inspired by their success.
@@ -66,7 +67,7 @@ const SkeletonFour = () => {
       <p className="font-bold md:text-4xl text-xl text-white">
         Advanced Analytics Dashboard
       </p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base text-white" />
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
         Deep dive into our analytics capabilities. Learn how to interpret data,
         optimize campaigns, and predict performance with 94% accuracy.

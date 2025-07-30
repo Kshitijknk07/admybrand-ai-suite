@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
 import {
   Brain,
   Target,
@@ -9,11 +8,9 @@ import {
   PenTool,
   Zap,
   Shield,
-  Users,
-  Clock,
-  DollarSign,
-  Sparkles,
 } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
 
 const Features = () => {
   const features = [

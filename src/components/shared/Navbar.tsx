@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { Menu, X, Sparkles } from 'lucide-react';
+import { useState } from 'react';
+
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

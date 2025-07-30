@@ -1,9 +1,10 @@
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Check, Star, Zap, Crown, Sparkles, ArrowRight, X } from 'lucide-react';
+import { useState } from 'react';
+
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Check, Star, Zap, Crown, Sparkles, ArrowRight, X } from 'lucide-react';
 
 // Feature Badge Component for Clean Comparison Table
 const FeatureBadge = ({
@@ -234,7 +235,9 @@ const Pricing = () => {
               )}
 
               <Card
-                className={`glass border-card-border hover:border-primary/30 transition-all duration-500 overflow-hidden h-full flex flex-col`}
+                className={
+                  'glass border-card-border hover:border-primary/30 transition-all duration-500 overflow-hidden h-full flex flex-col'
+                }
               >
                 <div className={`h-1 bg-gradient-to-r ${plan.gradient}`} />
 

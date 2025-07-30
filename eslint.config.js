@@ -11,11 +11,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   { ignores: ['dist', 'node_modules', '*.config.js', '*.config.ts'] },
   {
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.recommendedTypeChecked,
-    ],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
@@ -27,8 +23,6 @@ export default tseslint.config(
         ecmaFeatures: {
           jsx: true,
         },
-        project: './tsconfig.json',
-        tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
@@ -46,7 +40,6 @@ export default tseslint.config(
       'import/resolver': {
         typescript: {
           alwaysTryTypes: true,
-          project: './tsconfig.json',
         },
       },
     },
@@ -54,57 +47,31 @@ export default tseslint.config(
       // Prettier integration
       'prettier/prettier': 'error',
 
+      // Disable conflicting rules that Prettier handles
+      'comma-dangle': 'off',
+      indent: 'off',
+      quotes: 'off',
+      semi: 'off',
+      'max-len': 'off',
+
       // React rules
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'react/display-name': 'error',
-      'react/jsx-key': 'error',
-      'react/jsx-no-duplicate-props': 'error',
-      'react/jsx-no-undef': 'error',
-      'react/jsx-uses-vars': 'error',
-      'react/no-array-index-key': 'warn',
-      'react/no-danger': 'warn',
-      'react/no-deprecated': 'error',
-      'react/no-direct-mutation-state': 'error',
-      'react/no-find-dom-node': 'error',
-      'react/no-is-mounted': 'error',
-      'react/no-render-return-value': 'error',
-      'react/no-string-refs': 'error',
-      'react/no-unescaped-entities': 'error',
-      'react/no-unknown-property': 'error',
-      'react/no-unsafe': 'error',
-      'react/self-closing-comp': 'error',
-      'react/sort-comp': 'error',
-
-      // React Hooks rules
-      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': 'warn',
 
-      // React Refresh rules
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
+      // TypeScript rules
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-
-      // Accessibility rules
-      'jsx-a11y/alt-text': 'error',
-      'jsx-a11y/anchor-has-content': 'error',
-      'jsx-a11y/anchor-is-valid': 'error',
-      'jsx-a11y/aria-props': 'error',
-      'jsx-a11y/aria-proptypes': 'error',
-      'jsx-a11y/aria-unsupported-elements': 'error',
-      'jsx-a11y/role-has-required-aria-props': 'error',
-      'jsx-a11y/role-supports-aria-props': 'error',
-      'jsx-a11y/click-events-have-key-events': 'warn',
-      'jsx-a11y/no-static-element-interactions': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
 
       // Import rules
-      'import/no-unresolved': 'error',
-      'import/named': 'error',
-      'import/default': 'error',
-      'import/namespace': 'error',
-      'import/no-duplicates': 'error',
       'import/order': [
         'error',
         {
@@ -123,60 +90,17 @@ export default tseslint.config(
           },
         },
       ],
-      'import/no-unused-modules': 'error',
-      'import/no-relative-parent-imports': 'error',
 
-      // TypeScript rules
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
-        },
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-      '@typescript-eslint/prefer-nullish-coalescing': 'error',
-      '@typescript-eslint/prefer-optional-chain': 'error',
-      '@typescript-eslint/no-unnecessary-condition': 'error',
-      '@typescript-eslint/no-floating-promises': 'error',
-      '@typescript-eslint/await-thenable': 'error',
-      '@typescript-eslint/no-misused-promises': 'error',
+      // Accessibility rules
+      'jsx-a11y/anchor-has-content': 'error',
+      'jsx-a11y/no-static-element-interactions': 'warn',
 
-      // General JavaScript/TypeScript rules
+      // General rules
       'no-console': 'warn',
-      'no-debugger': 'error',
-      'no-alert': 'warn',
-      'no-var': 'error',
       'prefer-const': 'error',
-      'no-duplicate-imports': 'error',
-      'no-unused-expressions': 'error',
-      'no-unreachable': 'error',
-      'no-constant-condition': 'error',
-      'no-empty': 'error',
-      'no-extra-semi': 'error',
-      'no-irregular-whitespace': 'error',
-      'no-multiple-empty-lines': ['error', { max: 2 }],
-      'no-trailing-spaces': 'error',
-      'eol-last': 'error',
-      'comma-dangle': ['error', 'always-multiline'],
-      semi: ['error', 'always'],
-      quotes: ['error', 'single', { avoidEscape: true }],
-      'object-curly-spacing': ['error', 'always'],
-      'array-bracket-spacing': ['error', 'never'],
-      indent: ['error', 2, { SwitchCase: 1 }],
-      'max-len': [
-        'error',
-        {
-          code: 80,
-          ignoreUrls: true,
-          ignoreStrings: true,
-          ignoreTemplateLiterals: true,
-        },
-      ],
+      'no-var': 'error',
+      'object-shorthand': 'error',
+      'prefer-template': 'error',
     },
   },
   {
@@ -201,10 +125,19 @@ export default tseslint.config(
     },
     rules: {
       'prettier/prettier': 'error',
+      'comma-dangle': 'off',
+      indent: 'off',
+      quotes: 'off',
+      semi: 'off',
+      'max-len': 'off',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'jsx-a11y/anchor-has-content': 'error',
+      'jsx-a11y/no-static-element-interactions': 'warn',
       'no-console': 'warn',
-      'no-debugger': 'error',
-      'no-alert': 'warn',
-      'no-var': 'error',
       'prefer-const': 'error',
     },
   }

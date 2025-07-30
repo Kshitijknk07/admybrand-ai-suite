@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, TrendingUp, Zap, Target } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
 import { FlipWords } from '@/components/ui/flip-words';
 
 const Hero = () => {
@@ -62,7 +63,8 @@ const Hero = () => {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+              backgroundImage:
+                'radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)',
               backgroundSize: '50px 50px',
             }}
           />
