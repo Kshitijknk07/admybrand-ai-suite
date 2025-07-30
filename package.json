@@ -1,7 +1,37 @@
 {
-  "name": "vite_react_shadcn_ts",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@admybrand/ai-suite",
+  "private": false,
+  "version": "1.0.0",
+  "description": "AI-Powered Marketing Platform for Campaign Optimization and Conversion Forecasting",
+  "keywords": [
+    "ai",
+    "marketing",
+    "automation",
+    "campaign-optimization",
+    "conversion-forecasting",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss"
+  ],
+  "author": {
+    "name": "ADmyBRAND Team",
+    "email": "hello@admybrand.ai",
+    "url": "https://admybrand.ai"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admybrand/ai-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/admybrand/ai-suite/issues"
+  },
+  "homepage": "https://admybrand.ai",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/admybrand"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

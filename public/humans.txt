@@ -1,0 +1,26 @@
+/* TEAM */
+    Developer: ADmyBRAND Team
+    Contact: hello@admybrand.ai
+    From: San Francisco, CA, USA
+
+/* SITE */
+    Last update: 2024/01/15
+    Language: English
+    Doctype: HTML5
+    IDE: VS Code
+    Standards: HTML5, CSS3, JavaScript ES6+, TypeScript
+    Components: React 18, Vite, Tailwind CSS, shadcn/ui
+    Software: Node.js, npm, Git
+
+/* THANKS */
+    Name: Open Source Community
+    Name: React Team
+    Name: Vite Team
+    Name: Tailwind CSS Team
+    Name: shadcn/ui Team
+
+/* SOCIAL */
+    Twitter: @admybrand
+    LinkedIn: /company/admybrand
+    GitHub: /admybrand
+    Website: https://admybrand.ai 
